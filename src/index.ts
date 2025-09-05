@@ -1,1 +1,1 @@
-export { BlurView } from "./blur";
+export { BlurView } from './blur'

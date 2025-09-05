@@ -1,4 +1,8 @@
-import type { HybridView, HybridViewProps, HybridViewMethods } from 'react-native-nitro-modules'
+import type {
+  HybridView,
+  HybridViewProps,
+  HybridViewMethods,
+} from 'react-native-nitro-modules'
 
 export interface BlurProps extends HybridViewProps {
   /** Радиус блюра в поинтах (по умолчанию 0) */
