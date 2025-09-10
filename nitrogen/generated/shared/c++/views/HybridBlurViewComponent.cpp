@@ -25,14 +25,14 @@ namespace margelo::nitro::nitroblur::views {
                                            const HybridBlurViewProps& sourceProps,
                                            const react::RawProps& rawProps):
     react::ViewProps(context, sourceProps, rawProps, filterObjectKeys),
-    blurRadius([&]() -> CachedProp<std::optional<double>> {
+    intensity([&]() -> CachedProp<std::optional<double>> {
       try {
-        const react::RawValue* rawValue = rawProps.at("blurRadius", nullptr, nullptr);
-        if (rawValue == nullptr) return sourceProps.blurRadius;
+        const react::RawValue* rawValue = rawProps.at("intensity", nullptr, nullptr);
+        if (rawValue == nullptr) return sourceProps.intensity;
         const auto& [runtime, value] = (std::pair<jsi::Runtime*, jsi::Value>)*rawValue;
-        return CachedProp<std::optional<double>>::fromRawValue(*runtime, value, sourceProps.blurRadius);
+        return CachedProp<std::optional<double>>::fromRawValue(*runtime, value, sourceProps.intensity);
       } catch (const std::exception& exc) {
-        throw std::runtime_error(std::string("BlurView.blurRadius: ") + exc.what());
+        throw std::runtime_error(std::string("BlurView.intensity: ") + exc.what());
       }
     }()),
     hybridRef([&]() -> CachedProp<std::optional<std::function<void(const std::shared_ptr<HybridBlurViewSpec>& /* ref */)>>> {
@@ -48,12 +48,12 @@ namespace margelo::nitro::nitroblur::views {
 
   HybridBlurViewProps::HybridBlurViewProps(const HybridBlurViewProps& other):
     react::ViewProps(),
-    blurRadius(other.blurRadius),
+    intensity(other.intensity),
     hybridRef(other.hybridRef) { }
 
   bool HybridBlurViewProps::filterObjectKeys(const std::string& propName) {
     switch (hashString(propName)) {
-      case hashString("blurRadius"): return true;
+      case hashString("intensity"): return true;
       case hashString("hybridRef"): return true;
       default: return false;
     }

@@ -43,7 +43,7 @@ namespace margelo::nitro::nitroblur::views {
                         const react::RawProps& rawProps);
 
   public:
-    CachedProp<std::optional<double>> blurRadius;
+    CachedProp<std::optional<double>> intensity;
     CachedProp<std::optional<std::function<void(const std::shared_ptr<HybridBlurViewSpec>& /* ref */)>>> hybridRef;
 
   private:

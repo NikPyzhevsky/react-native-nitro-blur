@@ -5,13 +5,9 @@ import type {
 } from 'react-native-nitro-modules'
 
 export interface BlurProps extends HybridViewProps {
-  /** Радиус блюра в поинтах (по умолчанию 0) */
-  blurRadius?: number
+    intensity?: number
 }
 
-export interface BlurMethods extends HybridViewMethods {
-  /** Сбросить стили к дефолтным значениям */
-  resetStyles(): void
-}
+export interface BlurMethods extends HybridViewMethods {}
 
 export type BlurView = HybridView<BlurProps, BlurMethods>

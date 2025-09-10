@@ -17,8 +17,6 @@ namespace NitroBlur { class HybridBlurViewSpec_cxx; }
 
 // Include C++ defined types
 #include "HybridBlurViewSpec.hpp"
-#include <NitroModules/Result.hpp>
-#include <exception>
 #include <memory>
 #include <optional>
 
@@ -54,14 +52,5 @@ namespace margelo::nitro::nitroblur::bridge::swift {
   // pragma MARK: std::weak_ptr<HybridBlurViewSpec>
   using std__weak_ptr_HybridBlurViewSpec_ = std::weak_ptr<HybridBlurViewSpec>;
   inline std__weak_ptr_HybridBlurViewSpec_ weakify_std__shared_ptr_HybridBlurViewSpec_(const std::shared_ptr<HybridBlurViewSpec>& strong) noexcept { return strong; }
-  
-  // pragma MARK: Result<void>
-  using Result_void_ = Result<void>;
-  inline Result_void_ create_Result_void_() noexcept {
-    return Result<void>::withValue();
-  }
-  inline Result_void_ create_Result_void_(const std::exception_ptr& error) noexcept {
-    return Result<void>::withError(error);
-  }
 
 } // namespace margelo::nitro::nitroblur::bridge::swift

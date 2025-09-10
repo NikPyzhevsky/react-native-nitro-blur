@@ -71,10 +71,10 @@ using namespace margelo::nitro::nitroblur::views;
   // 2. Update each prop individually
   swiftPart.beforeUpdate();
 
-  // blurRadius: optional
-  if (newViewProps.blurRadius.isDirty) {
-    swiftPart.setBlurRadius(newViewProps.blurRadius.value);
-    newViewProps.blurRadius.isDirty = false;
+  // intensity: optional
+  if (newViewProps.intensity.isDirty) {
+    swiftPart.setIntensity(newViewProps.intensity.value);
+    newViewProps.intensity.isDirty = false;
   }
 
   swiftPart.afterUpdate();

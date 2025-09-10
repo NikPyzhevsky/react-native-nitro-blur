@@ -36,8 +36,8 @@ void JHybridBlurViewStateUpdater::updateViewProps(jni::alias_ref<jni::JClass> /*
     throw std::runtime_error("HybridBlurViewState's data doesn't contain any props!");
   }
   const HybridBlurViewProps& props = maybeProps.value();
-  if (props.blurRadius.isDirty) {
-    view->setBlurRadius(props.blurRadius.value);
+  if (props.intensity.isDirty) {
+    view->setIntensity(props.intensity.value);
     // TODO: Set isDirty = false
   }
 

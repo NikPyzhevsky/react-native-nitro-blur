@@ -4,7 +4,7 @@
   "bubblingEventTypes": {},
   "directEventTypes": {},
   "validAttributes": {
-    "blurRadius": true,
+    "intensity": true,
     "hybridRef": true
   }
 }

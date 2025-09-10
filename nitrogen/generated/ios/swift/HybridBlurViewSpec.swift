@@ -11,10 +11,10 @@ import NitroModules
 /// See ``HybridBlurViewSpec``
 public protocol HybridBlurViewSpec_protocol: HybridObject, HybridView {
   // Properties
-  var blurRadius: Double? { get set }
+  var intensity: Double? { get set }
 
   // Methods
-  func resetStyles() throws -> Void
+  
 }
 
 /// See ``HybridBlurViewSpec``

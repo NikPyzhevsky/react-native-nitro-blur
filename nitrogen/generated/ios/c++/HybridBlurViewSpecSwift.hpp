@@ -53,22 +53,17 @@ namespace margelo::nitro::nitroblur {
 
   public:
     // Properties
-    inline std::optional<double> getBlurRadius() noexcept override {
-      auto __result = _swiftPart.getBlurRadius();
+    inline std::optional<double> getIntensity() noexcept override {
+      auto __result = _swiftPart.getIntensity();
       return __result;
     }
-    inline void setBlurRadius(std::optional<double> blurRadius) noexcept override {
-      _swiftPart.setBlurRadius(blurRadius);
+    inline void setIntensity(std::optional<double> intensity) noexcept override {
+      _swiftPart.setIntensity(intensity);
     }
 
   public:
     // Methods
-    inline void resetStyles() override {
-      auto __result = _swiftPart.resetStyles();
-      if (__result.hasError()) [[unlikely]] {
-        std::rethrow_exception(__result.error());
-      }
-    }
+    
 
   private:
     NitroBlur::HybridBlurViewSpec_cxx _swiftPart;

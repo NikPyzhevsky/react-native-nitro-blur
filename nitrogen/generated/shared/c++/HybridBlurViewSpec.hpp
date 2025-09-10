@@ -44,12 +44,12 @@ namespace margelo::nitro::nitroblur {
 
     public:
       // Properties
-      virtual std::optional<double> getBlurRadius() = 0;
-      virtual void setBlurRadius(std::optional<double> blurRadius) = 0;
+      virtual std::optional<double> getIntensity() = 0;
+      virtual void setIntensity(std::optional<double> intensity) = 0;
 
     public:
       // Methods
-      virtual void resetStyles() = 0;
+      
 
     protected:
       // Hybrid Setup

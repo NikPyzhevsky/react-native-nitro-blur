@@ -14,9 +14,8 @@ namespace margelo::nitro::nitroblur {
     HybridObject::loadHybridMethods();
     // load custom methods/properties
     registerHybrids(this, [](Prototype& prototype) {
-      prototype.registerHybridGetter("blurRadius", &HybridBlurViewSpec::getBlurRadius);
-      prototype.registerHybridSetter("blurRadius", &HybridBlurViewSpec::setBlurRadius);
-      prototype.registerHybridMethod("resetStyles", &HybridBlurViewSpec::resetStyles);
+      prototype.registerHybridGetter("intensity", &HybridBlurViewSpec::getIntensity);
+      prototype.registerHybridSetter("intensity", &HybridBlurViewSpec::setIntensity);
     });
   }
 

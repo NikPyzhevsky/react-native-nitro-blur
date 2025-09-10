@@ -42,12 +42,10 @@ abstract class HybridBlurViewSpec: HybridView() {
   @get:Keep
   @set:DoNotStrip
   @set:Keep
-  abstract var blurRadius: Double?
+  abstract var intensity: Double?
 
   // Methods
-  @DoNotStrip
-  @Keep
-  abstract fun resetStyles(): Unit
+  
 
   private external fun initHybrid(): HybridData
 

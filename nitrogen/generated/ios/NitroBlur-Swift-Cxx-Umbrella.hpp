@@ -13,8 +13,6 @@ namespace margelo::nitro::nitroblur { class HybridBlurViewSpec; }
 
 // Include C++ defined types
 #include "HybridBlurViewSpec.hpp"
-#include <NitroModules/Result.hpp>
-#include <exception>
 #include <memory>
 #include <optional>
 

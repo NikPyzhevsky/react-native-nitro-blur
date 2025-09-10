@@ -49,12 +49,12 @@ namespace margelo::nitro::nitroblur {
 
   public:
     // Properties
-    std::optional<double> getBlurRadius() override;
-    void setBlurRadius(std::optional<double> blurRadius) override;
+    std::optional<double> getIntensity() override;
+    void setIntensity(std::optional<double> intensity) override;
 
   public:
     // Methods
-    void resetStyles() override;
+    
 
   private:
     friend HybridBase;

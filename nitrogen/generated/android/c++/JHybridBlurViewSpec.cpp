@@ -34,20 +34,17 @@ namespace margelo::nitro::nitroblur {
   }
 
   // Properties
-  std::optional<double> JHybridBlurViewSpec::getBlurRadius() {
-    static const auto method = javaClassStatic()->getMethod<jni::local_ref<jni::JDouble>()>("getBlurRadius");
+  std::optional<double> JHybridBlurViewSpec::getIntensity() {
+    static const auto method = javaClassStatic()->getMethod<jni::local_ref<jni::JDouble>()>("getIntensity");
     auto __result = method(_javaPart);
     return __result != nullptr ? std::make_optional(__result->value()) : std::nullopt;
   }
-  void JHybridBlurViewSpec::setBlurRadius(std::optional<double> blurRadius) {
-    static const auto method = javaClassStatic()->getMethod<void(jni::alias_ref<jni::JDouble> /* blurRadius */)>("setBlurRadius");
-    method(_javaPart, blurRadius.has_value() ? jni::JDouble::valueOf(blurRadius.value()) : nullptr);
+  void JHybridBlurViewSpec::setIntensity(std::optional<double> intensity) {
+    static const auto method = javaClassStatic()->getMethod<void(jni::alias_ref<jni::JDouble> /* intensity */)>("setIntensity");
+    method(_javaPart, intensity.has_value() ? jni::JDouble::valueOf(intensity.value()) : nullptr);
   }
 
   // Methods
-  void JHybridBlurViewSpec::resetStyles() {
-    static const auto method = javaClassStatic()->getMethod<void()>("resetStyles");
-    method(_javaPart);
-  }
+  
 
 } // namespace margelo::nitro::nitroblur

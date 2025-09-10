@@ -1,1 +1,1 @@
-export { BlurView } from './blur'
+export {default as BlurView} from './nitro-blur'

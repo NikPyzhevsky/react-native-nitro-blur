@@ -106,11 +106,11 @@ open class HybridBlurViewSpec_cxx {
   }
 
   // Properties
-  public final var blurRadius: bridge.std__optional_double_ {
+  public final var intensity: bridge.std__optional_double_ {
     @inline(__always)
     get {
       return { () -> bridge.std__optional_double_ in
-        if let __unwrappedValue = self.__implementation.blurRadius {
+        if let __unwrappedValue = self.__implementation.intensity {
           return bridge.create_std__optional_double_(__unwrappedValue)
         } else {
           return .init()
@@ -119,22 +119,11 @@ open class HybridBlurViewSpec_cxx {
     }
     @inline(__always)
     set {
-      self.__implementation.blurRadius = newValue.value
+      self.__implementation.intensity = newValue.value
     }
   }
 
   // Methods
-  @inline(__always)
-  public final func resetStyles() -> bridge.Result_void_ {
-    do {
-      try self.__implementation.resetStyles()
-      return bridge.create_Result_void_()
-    } catch (let __error) {
-      let __exceptionPtr = __error.toCpp()
-      return bridge.create_Result_void_(__exceptionPtr)
-    }
-  }
-  
   public final func getView() -> UnsafeMutableRawPointer {
     return Unmanaged.passRetained(__implementation.view).toOpaque()
   }
