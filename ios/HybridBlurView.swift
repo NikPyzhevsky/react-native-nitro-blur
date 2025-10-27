@@ -18,9 +18,9 @@ final class HybridBlurView: HybridBlurViewSpec {
       }
 
     private let blurView = BlurEffectView()
-    var view: UIView { intensity }
+    var view: UIView { blurView }
 
-    func updateRadius(){
+    func updateIntensity(){
         blurView.intensity = intensity ?? 0
     }
 
