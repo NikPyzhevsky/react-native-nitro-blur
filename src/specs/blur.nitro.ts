@@ -5,7 +5,7 @@ import type {
 } from 'react-native-nitro-modules'
 
 export interface BlurProps extends HybridViewProps {
-    intensity?: number
+    intensity?: number;
 }
 
 export interface BlurMethods extends HybridViewMethods {}

@@ -1,8 +1,8 @@
 // biome-ignore lint/correctness/noUnusedImports: Needed for JSX runtime
-import React, { type FC } from 'react'
+import React, {type FC} from 'react'
 import type { BlurProps } from './specs/blur.nitro'
 import { BlurView } from './blur'
-import type { StyleProp, ViewStyle } from 'react-native'
+import {type StyleProp, type ViewStyle} from 'react-native'
 
 interface NitroBlurProps extends BlurProps {
   style?: StyleProp<ViewStyle>
