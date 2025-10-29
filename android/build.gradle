@@ -143,7 +143,7 @@ dependencies {
 
 configurations.all {
   resolutionStrategy {
-    force "com.github.Dimezis:BlurView:2.0.6"
+    force "com.github.Dimezis:BlurView:version-2.0.6"
   }
 }
 
